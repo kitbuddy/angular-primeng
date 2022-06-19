@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-PrimeNg';
+  loginSuccessful = true;
+  display: boolean = true;
+
+  showDialog() {
+    this.display = true;
+  }
 }

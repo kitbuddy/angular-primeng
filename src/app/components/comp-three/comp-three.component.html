@@ -1,0 +1,18 @@
+<h2> Component Three </h2>
+
+<span>
+  <button (click)="isAvailable = !isAvailable">IS_Available</button>
+</span>
+
+isAvailable: {{isAvailable}}
+
+<br>
+<br>
+<span  class="directiveClass" appToggleDirective>This is Clickable highlighted text</span>
+
+<!--<button [ttClass]="'blue'">Click Me</button>-->
+<!--<button *ttClass="'blue'">Click Me</button>-->
+
+<br>
+<br>
+<button appToggleDirective>Toggle Button</button>

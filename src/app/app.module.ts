@@ -3,16 +3,59 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CompOneComponent } from './components/comp-one/comp-one.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSliderModule} from "@angular/material/slider";
+import {HttpClientModule} from "@angular/common/http";
+import {MatTableModule} from "@angular/material/table";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import { PercentagePipePipe } from './pipes/percentage-pipe.pipe';
+import { MultiplyBy100Pipe } from './pipes/multiply-by100.pipe';
+import { CompTwoComponent } from './components/comp-two/comp-two.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatMenuModule} from "@angular/material/menu";
+import { HomeComponent } from './components/home/home.component';
+import { CheckDirectiveDirective } from './directives/check-directive.directive';
+import { CompThreeComponent } from './components/comp-three/comp-three.component';
+import { IfDirectiveDirective } from './directives/if-directive.directive';
+import {FormsModule} from "@angular/forms";
+import { ToggleDirectiveDirective } from './directives/toggle-directive.directive';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import {DialogModule} from "primeng/dialog";
+import {DividerModule} from "primeng/divider";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CompOneComponent,
+    PercentagePipePipe,
+    MultiplyBy100Pipe,
+    CompTwoComponent,
+    HomeComponent,
+    CheckDirectiveDirective,
+    CompThreeComponent,
+    IfDirectiveDirective,
+    ToggleDirectiveDirective,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    HttpClientModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatMenuModule,
+    FormsModule,
+    DialogModule,
+    DividerModule,
   ],
-  providers: [],
+  exports: [CheckDirectiveDirective],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

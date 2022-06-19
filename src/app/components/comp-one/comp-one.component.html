@@ -1,0 +1,53 @@
+<!--<mat-slider min="1" max="100" step="1" [value]="sliderValue"></mat-slider>-->
+<!--{{sliderValue}}-->
+<h3>Json Data Displayed here</h3>
+<!--  <ng-container *ngFor="let val of jsonData">-->
+<!--    {{val.userId}}-->
+<!--  </ng-container>-->
+<div class="course">
+  <button (click)="refresh_Table()">Refresh</button>
+  <button (click)="ShowEvenUserIds()">Show Even User Ids</button>
+<mat-table class="lessons-table mat-elevation-z8" [dataSource]="jsonData">
+
+  <ng-container matColumnDef="userId">
+    <mat-header-cell *matHeaderCellDef>User ID</mat-header-cell>
+    <mat-cell *matCellDef="let lesson">{{lesson.userId}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="userId*100">
+    <mat-header-cell *matHeaderCellDef>User ID*100</mat-header-cell>
+    <mat-cell *matCellDef="let lesson">{{lesson.userId| multiplyBy100}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>>
+    <mat-cell *matCellDef="let lesson">{{lesson.id}} %</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="testIDPercentage">
+    <mat-header-cell *matHeaderCellDef>ID Percentage</mat-header-cell>>
+    <mat-cell *matCellDef="let lesson">{{lesson.id| percentagePipe}} %</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="title">
+    <mat-header-cell *matHeaderCellDef>Ttile</mat-header-cell>>
+    <mat-cell *matCellDef="let lesson" (click)="onRowClicked(lesson)" >{{lesson.title}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="body">
+    <mat-header-cell *matHeaderCellDef>Body</mat-header-cell>>
+    <mat-cell *matCellDef="let lesson">{{lesson.body}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="time">
+    <mat-header-cell *matHeaderCellDef>Time</mat-header-cell>>
+    <mat-cell *matCellDef="let lesson">{{getTime |  date}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+</mat-table>
+
+</div>

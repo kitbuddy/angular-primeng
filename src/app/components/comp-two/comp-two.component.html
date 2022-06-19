@@ -1,0 +1,21 @@
+<h2>Component 2</h2>
+
+<h4>Open console window to see Angular Life Cycle</h4>
+
+<h1> {{title}} </h1>
+
+Show Me
+<input type="checkbox" [(ngModel)]="show">
+
+<div *ttIf="show">
+  Using the ttIf directive
+</div>
+
+<div *ngIf="show">
+  Using the ngIf directive
+</div>
+<p-dialog header="Title" [(visible)]="display">
+  Content
+</p-dialog>
+<button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">SHOW</button>
+
