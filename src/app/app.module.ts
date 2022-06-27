@@ -24,6 +24,7 @@ import { ToggleDirectiveDirective } from './directives/toggle-directive.directiv
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import {DialogModule} from "primeng/dialog";
 import {DividerModule} from "primeng/divider";
+import { CompFourScrollingComponent } from './components/comp-four-scrolling/comp-four-scrolling.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {DividerModule} from "primeng/divider";
     CompThreeComponent,
     IfDirectiveDirective,
     ToggleDirectiveDirective,
-    LoginPageComponent
+    LoginPageComponent,
+    CompFourScrollingComponent
   ],
   imports: [
     BrowserModule,
