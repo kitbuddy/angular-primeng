@@ -1,4 +1,6 @@
-<!--<mat-slider min="1" max="100" step="1" [value]="sliderValue"></mat-slider>-->
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head><!--<mat-slider min="1" max="100" step="1" [value]="sliderValue"></mat-slider>-->
 <!--{{sliderValue}}-->
 <h3>Json Data Displayed here</h3>
 <!--  <ng-container *ngFor="let val of jsonData">-->
@@ -31,6 +33,7 @@
 
   <ng-container matColumnDef="title">
     <mat-header-cell *matHeaderCellDef>Ttile</mat-header-cell>>
+
     <mat-cell *matCellDef="let lesson" (click)="onRowClicked(lesson)" >{{lesson.title}}</mat-cell>
   </ng-container>
 
@@ -44,10 +47,40 @@
     <mat-cell *matCellDef="let lesson">{{getTime |  date}}</mat-cell>
   </ng-container>
 
+  <ng-container matColumnDef="Action">
+    <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+    <mat-cell *matCellDef="let lesson">
+      <i class="glyphicon glyphicon-cloud icon-size" (click)="openSidebar = true"></i>
+
+    </mat-cell>
+  </ng-container>
+
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 
   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-
 </mat-table>
 
+
 </div>
+<p-sidebar [(visible)]="openSidebar"
+           styleClass="p-sidebar-md sidebar-class"
+           position="right"
+           [style]="{width:'30em', height: '50em'}">
+  <mat-card>
+  <span class="display-sidebar-data">
+    <h3>Right Sidebar</h3>
+  <p-button (click)="openSidebar = false" style="margin-left: 10em"> X</p-button>
+  </span>
+  <div>
+   <span class="display-sidebar-data">
+    <h3>
+      User Id:
+    </h3>
+    <h3>
+      {{userIdSelected}}
+    </h3>
+     </span>
+
+  </div>
+  </mat-card>
+</p-sidebar>

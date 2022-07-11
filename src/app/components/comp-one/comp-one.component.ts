@@ -16,8 +16,10 @@ export class CompOneComponent implements OnInit, OnChanges {
 
   sliderValue = 1;
   jsonData: any;
-  displayedColumns = ['userId','userId*100', 'Id', 'testIDPercentage', 'title', 'body', 'time'];
+  displayedColumns = ['userId','userId*100', 'Id', 'testIDPercentage', 'title', 'body', 'time', 'Action'];
   getTime = this.getCurrentTime();
+  openSidebar = false;
+  userIdSelected = '1';
 
   constructor(private getTestJsonService: GetTestJsonService) {
     console.log('constructor')

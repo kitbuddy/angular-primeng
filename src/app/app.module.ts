@@ -25,6 +25,10 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import {DialogModule} from "primeng/dialog";
 import {DividerModule} from "primeng/divider";
 import { CompFourScrollingComponent } from './components/comp-four-scrolling/comp-four-scrolling.component';
+import { SideBarForCompOneComponent } from './side-bar-for-comp-one/side-bar-for-comp-one.component';
+import {SidebarModule} from "primeng/sidebar";
+import {ButtonModule} from "primeng/button";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -39,7 +43,8 @@ import { CompFourScrollingComponent } from './components/comp-four-scrolling/com
     IfDirectiveDirective,
     ToggleDirectiveDirective,
     LoginPageComponent,
-    CompFourScrollingComponent
+    CompFourScrollingComponent,
+    SideBarForCompOneComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +60,9 @@ import { CompFourScrollingComponent } from './components/comp-four-scrolling/com
     FormsModule,
     DialogModule,
     DividerModule,
+    SidebarModule,
+    ButtonModule,
+    MatCardModule,
   ],
   exports: [CheckDirectiveDirective],
   providers: [HttpClientModule],
