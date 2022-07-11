@@ -1,5 +1,6 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {GetTestJsonService} from "../../service/get-test-json.service";
+import {BehaviourSubjectSerService} from "../../service/behaviour-subject-ser.service";
 
 function simpleDecorator(target: any) {
   // window.alert('window is loading')
@@ -20,9 +21,15 @@ export class CompOneComponent implements OnInit, OnChanges {
   getTime = this.getCurrentTime();
   openSidebar = false;
   userIdSelected = '1';
+  _refreshStatus = false;
 
-  constructor(private getTestJsonService: GetTestJsonService) {
+  constructor(private getTestJsonService: GetTestJsonService,
+              public behaviorService: BehaviourSubjectSerService) {
     console.log('constructor')
+    this.behaviorService.getRefreshedStatus().subscribe(value => {
+      console.log(this._refreshStatus)
+      this._refreshStatus = value;
+    })
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -31,6 +38,7 @@ export class CompOneComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     console.log('oninit')
     this.getJsonData();
+
   }
 
   private getJsonData() {
