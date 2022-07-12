@@ -2,6 +2,8 @@
   <app-login-page></app-login-page>
 </div>
 
+<div *ngIf="displayMenuItem"></div>
+
 <div *ngIf="loginSuccessful">
 
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
@@ -34,6 +36,10 @@
       </button>
     </mat-menu>
 
+
+  <h5>Popup</h5>
+  <button #btn type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)"></button>
+  <p-slideMenu #menu [model]="items" [popup]="true" [viewportHeight]="250"></p-slideMenu>
 
     <router-outlet></router-outlet>
   </div>

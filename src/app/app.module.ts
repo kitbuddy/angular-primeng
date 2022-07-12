@@ -29,6 +29,9 @@ import { SideBarForCompOneComponent } from './side-bar-for-comp-one/side-bar-for
 import {SidebarModule} from "primeng/sidebar";
 import {ButtonModule} from "primeng/button";
 import {MatCardModule} from "@angular/material/card";
+import {TabViewModule} from "primeng/tabview";
+import { MenuItemsComponent } from './components/menu-items/menu-items.component';
+import {SlideMenuModule} from "primeng/slidemenu";
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ import {MatCardModule} from "@angular/material/card";
     ToggleDirectiveDirective,
     LoginPageComponent,
     CompFourScrollingComponent,
-    SideBarForCompOneComponent
+    SideBarForCompOneComponent,
+    MenuItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +67,8 @@ import {MatCardModule} from "@angular/material/card";
     SidebarModule,
     ButtonModule,
     MatCardModule,
+    TabViewModule,
+    SlideMenuModule,
   ],
   exports: [CheckDirectiveDirective],
   providers: [HttpClientModule],
