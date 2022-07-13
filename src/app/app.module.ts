@@ -34,6 +34,7 @@ import { MenuItemsComponent } from './components/menu-items/menu-items.component
 import {SlideMenuModule} from "primeng/slidemenu";
 import { CompParentComponent } from './components/comp-parent/comp-parent.component';
 import { CompChildComponent } from './components/comp-child/comp-child.component';
+import { GetComponentNameDirective } from './directives/get-component-name.directive';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { CompChildComponent } from './components/comp-child/comp-child.component
     SideBarForCompOneComponent,
     MenuItemsComponent,
     CompParentComponent,
-    CompChildComponent
+    CompChildComponent,
+    GetComponentNameDirective
   ],
   imports: [
     BrowserModule,

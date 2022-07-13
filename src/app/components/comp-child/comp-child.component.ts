@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-comp-child',
   templateUrl: './comp-child.component.html',
