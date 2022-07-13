@@ -34,12 +34,15 @@
         <mat-icon>home</mat-icon>
         <span><a routerLink="/comp-IV">Component Four</a></span>
       </button>
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span><a routerLink="/comp-parent">Component Parent</a></span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span><a routerLink="/comp-child">Component Child</a></span>
+      </button>
     </mat-menu>
-
-
-  <h5>Popup</h5>
-  <button #btn type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)"></button>
-  <p-slideMenu #menu [model]="items" [popup]="true" [viewportHeight]="250"></p-slideMenu>
 
     <router-outlet></router-outlet>
   </div>

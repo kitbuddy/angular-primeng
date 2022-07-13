@@ -32,6 +32,8 @@ import {MatCardModule} from "@angular/material/card";
 import {TabViewModule} from "primeng/tabview";
 import { MenuItemsComponent } from './components/menu-items/menu-items.component';
 import {SlideMenuModule} from "primeng/slidemenu";
+import { CompParentComponent } from './components/comp-parent/comp-parent.component';
+import { CompChildComponent } from './components/comp-child/comp-child.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import {SlideMenuModule} from "primeng/slidemenu";
     LoginPageComponent,
     CompFourScrollingComponent,
     SideBarForCompOneComponent,
-    MenuItemsComponent
+    MenuItemsComponent,
+    CompParentComponent,
+    CompChildComponent
   ],
   imports: [
     BrowserModule,
