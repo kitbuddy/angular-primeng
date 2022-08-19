@@ -35,6 +35,7 @@ import {SlideMenuModule} from "primeng/slidemenu";
 import { CompParentComponent } from './components/comp-parent/comp-parent.component';
 import { CompChildComponent } from './components/comp-child/comp-child.component';
 import { GetComponentNameDirective } from './directives/get-component-name.directive';
+import { MuralComponent } from './components/mural/mural.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { GetComponentNameDirective } from './directives/get-component-name.direc
     MenuItemsComponent,
     CompParentComponent,
     CompChildComponent,
-    GetComponentNameDirective
+    GetComponentNameDirective,
+    MuralComponent
   ],
   imports: [
     BrowserModule,
