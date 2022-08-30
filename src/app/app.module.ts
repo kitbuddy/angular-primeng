@@ -36,6 +36,7 @@ import { CompParentComponent } from './components/comp-parent/comp-parent.compon
 import { CompChildComponent } from './components/comp-child/comp-child.component';
 import { GetComponentNameDirective } from './directives/get-component-name.directive';
 import { MuralComponent } from './components/mural/mural.component';
+import {CardModule} from "primeng/card";
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { MuralComponent } from './components/mural/mural.component';
     MatCardModule,
     TabViewModule,
     SlideMenuModule,
+    CardModule,
   ],
   exports: [CheckDirectiveDirective],
   providers: [HttpClientModule],
