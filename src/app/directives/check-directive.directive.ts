@@ -4,9 +4,7 @@ import {
   Input,
   OnChanges,
   OnInit,
-  SimpleChanges,
-  TemplateRef,
-  ViewContainerRef
+  SimpleChanges
 } from '@angular/core';
 
 @Directive({

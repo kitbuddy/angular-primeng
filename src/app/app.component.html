@@ -2,6 +2,8 @@
   <app-login-page></app-login-page>
 </div>
 
+<div *ngIf="displayMenuItem"></div>
+
 <div *ngIf="loginSuccessful">
 
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
@@ -32,8 +34,15 @@
         <mat-icon>home</mat-icon>
         <span><a routerLink="/comp-IV">Component Four</a></span>
       </button>
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span><a routerLink="/comp-parent">Component Parent</a></span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span><a routerLink="/comp-child">Component Child</a></span>
+      </button>
     </mat-menu>
-
 
     <router-outlet></router-outlet>
   </div>
